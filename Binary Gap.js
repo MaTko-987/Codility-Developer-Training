@@ -5,7 +5,7 @@ function solution(N) {
     if (N === parseInt(N, 10) && N>=1 && N<=2147483647){
 
         /*
-        
+
         1) parseInt(string, radix/base) - function parses/raščlanuje a string argument and returns an integer of the specified radix (the base in mathematical numeral systems
         
         Radix - The decimal number system that we use every day has 10 digits {0,1,2,3,4,5,6,7,8,9} and so the radix is 10 (also called Base 10). 
@@ -22,7 +22,11 @@ function solution(N) {
 
         //turn it to binary
         const binary = N.toString(2)
-        /* .toString() - number to string in binary
+
+        /* 
+        
+        
+        1).toString() - number to string in binary
         The toString() method in Javascript is used with a number and converts the number to a string. It is used to return a string representing the specified Number object.
         Parameters Used: This method accepts a single optional parameter base. This parameter specifies the base in which the integer is represented in the string. 
         It is an integer between 2 and 36 which is used to specify the base for representing numeric values.
