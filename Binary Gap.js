@@ -27,17 +27,20 @@ function solution(N) {
         
         
         1).toString() - number to string in binary
+
         The toString() method in Javascript is used with a number and converts the number to a string. It is used to return a string representing the specified Number object.
         Parameters Used: This method accepts a single optional parameter base. This parameter specifies the base in which the integer is represented in the string. 
         It is an integer between 2 and 36 which is used to specify the base for representing numeric values.
 
-        https://www.geeksforgeeks.org/javascript-tostring-function/ --> check out for other bases (2,8,16,32...)
+        https://www.geeksforgeeks.org/javascript-tostring-function/ --> check out for other bases (2,8,16,32, no base returns the same number...)
         */
 
+
+
         //turn it into an array
-        let NArray = binary.split('') //The split() method splits a string into an array of substrings, and returns the array. exmpl: How,are,you,doing,today?
+        let NArray = binary.split(''); //The split() method splits a string into an array of substrings, and returns the array. exmpl: How,are,you,doing,today?
         
-        findGap(NArray)
+        findGap(NArray);
     }
     return gap;
     
@@ -52,14 +55,23 @@ function evalGap(distance){
 }
 
 function findGap(binaryArray) {
-    if (binaryArray.indexOf('1') == -1){
+    if (binaryArray.indexOf('1') == -1){ //.indexOf() - method returns the position of the first occurrence of a specified value in a string
         return gap
     } 
+
     else {
         index1 = binaryArray.indexOf('1');
         evalGap(index1)
 
-        binaryArray = binaryArray.slice(index1+1);
+        binaryArray = binaryArray.slice(index1+1); // .slice() - method method extracts parts of a string and returns the extracted parts in a new string.
+
+        /*Use the start and end parameters to specify the part of the string you want to extract.
+        
+        The first character has the position 0, the second has position 1, and so on.
+        
+        Tip: Use a negative number to select from the end of the string. */
+
+        
         index2 = binaryArray.indexOf('1')
 
         if (index2 !== -1) {
